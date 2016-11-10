@@ -1,0 +1,6 @@
+#Mapping values
+#Tue Aug 12 14:58:40 CEST 2014
+Status=Geocoding_status__c
+ID=Id
+Lat=Lat__c
+Lon=Lon__c
