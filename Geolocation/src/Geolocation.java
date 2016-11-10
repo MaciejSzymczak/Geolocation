@@ -15,7 +15,6 @@ import javax.net.ssl.HttpsURLConnection;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.xpath.XPathExpressionException;
 
-import org.json.simple.parser.ParseException;
 import org.xml.sax.SAXException;
 
 /**
@@ -25,7 +24,7 @@ import org.xml.sax.SAXException;
  */
 public class Geolocation  {
 	
-	public static void main(String[] args) throws ParseException, IOException, InterruptedException, InvalidKeyException, SignatureException, NoSuchAlgorithmException, XPathExpressionException, ParserConfigurationException, SAXException
+	public static void main(String[] args) throws  IOException, InterruptedException, InvalidKeyException, SignatureException, NoSuchAlgorithmException, XPathExpressionException, ParserConfigurationException, SAXException
 	   {
 	    String sourceFile        = "C:\\Interfaces\\GeolocationUpdate\\data\\AccountsIn.csv";
 	    String destFileLatLon    = "C:Interfaces\\GeolocationUpdate\\data\\AccountsOut.csv";
@@ -74,7 +73,7 @@ public class Geolocation  {
 			return a;		
 		}		
 		
-		public void readcsv(String sourceFile, String destFileLatLon, String destFileOverQuery, String client, String keyString) throws ParseException, IOException, InterruptedException, InvalidKeyException, SignatureException, NoSuchAlgorithmException, XPathExpressionException, ParserConfigurationException, SAXException {
+		public void readcsv(String sourceFile, String destFileLatLon, String destFileOverQuery, String client, String keyString) throws IOException, InterruptedException, InvalidKeyException, SignatureException, NoSuchAlgorithmException, XPathExpressionException, ParserConfigurationException, SAXException {
 			Integer phisicalLineNo=0;
 			Integer recordNo=0;
 		
@@ -291,7 +290,7 @@ public class Geolocation  {
 		}
 		*/
 			
-	   private LatLonStatus getLatLonStatus(String address, String Client, String keyString) throws ParseException, InvalidKeyException, SignatureException, NoSuchAlgorithmException, IOException, XPathExpressionException, ParserConfigurationException, SAXException{
+	   private LatLonStatus getLatLonStatus(String address, String Client, String keyString) throws InvalidKeyException, SignatureException, NoSuchAlgorithmException, IOException, XPathExpressionException, ParserConfigurationException, SAXException{
 	   
 		    LatLonStatus res;
 		    res = new LatLonStatus();
